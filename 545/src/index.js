@@ -56,7 +56,17 @@ var routeMap = {
 						require.ensure([], (require) => {
 							cb(null, require('./pages/workCollection/WorkCollection'))
 						})		
-					}
+					},
+					childRoutes:[
+						{
+							path:'workDetail',
+							getComponent: (location, cb) => {
+								require.ensure([], (require) => {
+									cb(null, require('./pages/workCollection/WorkDetail'))
+								})		
+							}
+						}
+					]
 				}
 			]
 		}

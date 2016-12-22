@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card,Row,Col } from 'antd'
+import {withRouter} from 'react-router'
 
 const Component = React.Component
 
@@ -12,7 +13,10 @@ class WorkCollection extends Component
 
 	onWorkDetail(e)
 	{	
-		debugger;
+		var url = '/workCollection/workDetail'
+		this.props.router.push({
+			pathname:url,
+		});
 	}
 
 	render()
@@ -20,12 +24,14 @@ class WorkCollection extends Component
 		var t = this;
 		var all = [1,2,3,4,5,6];
 		return(
+
 			<div className="work-collection-wrapper">
 				{
+					this.props.children? this.props.children:
 					all.map(function(val)
 					{
 						return(
-							<Card title={<span onClick={t.onWorkDetail.bind(t)}>title</span>} extra={<span>time</span>}>
+							<Card title={<span className="collection-title" onClick={t.onWorkDetail.bind(t)}>title</span>} extra={<span>time</span>}>
 								<Row>
 									<Col span={16}>
 										<p>本项目围绕生物反应器的关键技术问题重点开展工程化技术研究，

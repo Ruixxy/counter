@@ -117,3 +117,21 @@ body{
 	margin:0 auto;
 	height: 180px;
 }
+.work-detail-wrapper .ant-col-4{
+	padding:20px;
+}
+.work-detail-wrapper .ant-col-20{	
+	border-left: 1px solid #D9D9D9;
+	box-shadow: -2px 0 1px 0px #D9D9D9;
+	padding-left: 40px;
+}
+.work-detail-wrapper h2{
+	text-align: center;
+}
+.collection-title{
+	cursor: pointer;
+}
+.collection-title:hover{
+	color: #221E1F;
+	font-weight: bold;
+}
