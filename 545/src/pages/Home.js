@@ -15,7 +15,7 @@ class Home extends Component
 		return(
 			<div className="home-wrapper">
 				<div className="pic-wrapper">
-					<Carousel>
+					<Carousel effect="fade">
 					    <div><img src="../images/homeImg1.jpg"/></div>
 					    <div><img src="../images/homeImg2.jpg"/></div>
 					    <div><img src="../images/homeImg3.jpg"/></div>

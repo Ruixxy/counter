@@ -24,25 +24,39 @@ var routeMap = {
 						require.ensure([], (require) => {
 							cb(null, require('./pages/Home'))
 						})
-					},
-					childRoutes:[
-						{
-							path:'timeRecord',
-							getComponent: (location, cb) => {
-								require.ensure([], (require) => {
-									cb(null, require('./pages/timeRecord/TimeRecord'))
-								})						
-							}
-						},
-						{
-							path:'loveThings',
-							getComponent: (location, cb) => {
-								require.ensure([], (require) => {
-									cb(null, require('./pages/loveThings/LoveThings'))
-								})					
-							}
-						}
-					]
+					}
+				},
+				{
+					path:'timeRecord',
+					getComponent: (location, cb) => {
+						require.ensure([], (require) => {
+							cb(null, require('./pages/timeRecord/TimeRecord'))
+						})			
+					}
+				},
+				{
+					path:'loveThings',
+					getComponent: (location, cb) => {
+						require.ensure([], (require) => {
+							cb(null, require('./pages/loveThings/LoveThings'))
+						})	
+					}
+				},
+				{
+					path:'blogs',
+					getComponent: (location, cb) => {
+						require.ensure([], (require) => {
+							cb(null, require('./pages/blogs/Blogs'))
+						})		
+					}
+				},
+				{
+					path:'workCollection',
+					getComponent: (location, cb) => {
+						require.ensure([], (require) => {
+							cb(null, require('./pages/workCollection/WorkCollection'))
+						})		
+					}
 				}
 			]
 		}
